@@ -1,0 +1,400 @@
+/* Subscription Panel Styles */
+.subscription-panel {
+    padding: 1.5rem;
+}
+
+.tab-buttons {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 0.4rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.tab-btn {
+    padding: 0.5rem 1.5rem;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 12px;
+    color: var(--text-gray);
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    transition: all 0.2s ease;
+    margin-inline: 0.5rem;
+}
+
+.tab-btn.active {
+    background-color: var(--blue);
+    color: white;
+}
+
+/* Empty State */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.illustration-container {
+    margin-bottom: 1.5rem;
+    max-width: 200px;
+}
+
+.illustration {
+    width: 100%;
+    height: auto;
+}
+
+.empty-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #333;
+}
+
+.empty-description {
+    color: var(--text-gray);
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    font-weight: 400;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.browse-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s ease;
+}
+
+.browse-btn:hover {
+    background-color: #1537A4;
+}
+
+/* Available Plans */
+.payment-selection-container,
+.course-selection-container {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--dark-gray);
+}
+
+.payment-options {
+    display: flex;
+    gap: 1rem;
+}
+
+.payment-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.payment-option.active {
+    border-color: var(--blue);
+}
+
+.payment-option img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.5rem;
+    object-fit: contain;
+}
+
+.course-selector {
+    position: relative;
+}
+
+.course-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.course-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.course-selector:hover .course-dropdown {
+    max-height: 200px;
+}
+
+.course-option {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.course-option:hover {
+    background-color: var(--light-gray);
+}
+
+/* Subscription Plans */
+.plans-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.plan-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.plan-header {
+    padding: 1.5rem;
+    background-color: var(--light-gray);
+    text-align: center;
+    position: relative;
+}
+
+.plan-badge {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    background-color: #FEF3C7;
+    color: #D97706;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.plan-title {
+    font-size: 1.25rem;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.plan-price {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.price-amount {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--blue);
+}
+
+.plan-features {
+    padding: 1.5rem;
+    list-style: none;
+}
+
+.plan-features li {
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.plan-features i {
+    color: var(--blue);
+    font-size: 1rem;
+}
+
+.subscribe-btn {
+    margin: 0 1.5rem 1.5rem;
+    width: calc(100% - 3rem);
+    padding: 0.75rem 1rem;
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s ease;
+}
+
+.subscribe-btn:hover {
+    background-color: #1537A4;
+}
+
+/* Active Subscriptions */
+.active-plans-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.active-plan-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.active-plan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.active-plan-card .plan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: white;
+    border-bottom: 1px solid var(--border-light);
+    text-align: right;
+}
+
+.active-plan-card .plan-title {
+    font-size: 1rem;
+    margin-left: 1rem;
+    line-height: 1.4;
+}
+
+.plan-menu {
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.plan-menu i {
+    font-size: 1.25rem;
+    color: var(--text-gray);
+}
+
+.plan-stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.stat-value {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.stat-icon {
+    color: var(--blue);
+    font-size: 1.1rem;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--text-gray);
+}
+
+.plan-info {
+    padding: 1rem 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.info-label {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.info-value {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.info-value.orange {
+    color: var(--orange);
+}
+
+.info-value.grey {
+    color: var(--text-gray);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .plans-row,
+    .active-plans-row {
+        grid-template-columns: 1fr;
+    }
+
+    .tab-buttons {
+        width: 100%;
+        display: flex;
+    }
+
+    .tab-btn {
+        flex: 1;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .payment-options {
+        flex-direction: column;
+    }
+
+    .payment-option {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+
+    .payment-option img {
+        margin-bottom: 0;
+    }
+}
